@@ -1,2 +1,3 @@
-include ':PdfView', ':pdfviewsample'
-include ':gestureimageview'
+include ":PdfView"
+include ":pdfviewsample"
+include ":gestureimageview"
