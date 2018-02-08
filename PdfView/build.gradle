@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: "maven"
+apply plugin: "signing"
 
 android
 {
@@ -8,6 +10,9 @@ android
   {
     minSdkVersion 14
     targetSdkVersion 27
+
+    versionCode 1
+    versionName "1.0-smart"
   }
 
   buildTypes
@@ -23,4 +28,32 @@ android
 dependencies
 {
   compile project(':gestureimageview')
+}
+
+version = android.defaultConfig.versionName
+group = "com.smartnsoft"
+
+uploadArchives
+{
+  repositories
+  {
+    mavenDeployer
+    {
+      repository(url: nexusReleaseUrl)
+      {
+        authentication(userName: nexusUsername, password: nexusPassword)
+      }
+      snapshotRepository(url: nexusSnapshotUrl)
+      {
+        authentication(userName: nexusUsername, password: nexusPassword)
+      }
+
+      pom.project
+      {
+        name "PdfView"
+        artifactId "pdfview"
+        packaging "aar"
+      }
+    }
+  }
 }
