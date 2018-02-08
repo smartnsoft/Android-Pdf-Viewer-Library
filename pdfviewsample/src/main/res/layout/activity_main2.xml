@@ -6,33 +6,39 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
 >
-  <ImageButton
-    android:id="@+id/preview"
-    android:layout_width="wrap_content"
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:src="@android:drawable/arrow_up_float"
-  />
+  >
+    <ImageButton
+      android:id="@+id/preview"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@android:drawable/arrow_up_float"
+    />
 
-  <ImageButton
-    android:id="@+id/next"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:src="@android:drawable/arrow_down_float"
-  />
+    <ImageButton
+      android:id="@+id/next"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@android:drawable/arrow_down_float"
+    />
 
-  <ImageButton
-    android:id="@+id/zoomIn"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:src="@android:drawable/btn_plus"
-  />
+    <ImageButton
+      android:id="@+id/zoomIn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@android:drawable/btn_plus"
+    />
 
-  <ImageButton
-    android:id="@+id/zoomOut"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:src="@android:drawable/btn_minus"
-  />
+    <ImageButton
+      android:id="@+id/zoomOut"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@android:drawable/btn_minus"
+    />
+  </LinearLayout>
 
   <net.sf.andpdf.pdfviewer.gui.PdfView
     android:id="@+id/pdf_view"
